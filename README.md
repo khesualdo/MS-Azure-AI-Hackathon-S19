@@ -61,7 +61,6 @@ Surprisingly the biggest challenge was capturing and then sending the image to t
 ## Technologies
 - Azure Cognitive Services (Custom Vision API)
 - Azure Functions
-- Azure App Services
 - HTML, CSS, JS
 - NodeJS, ExpressJS
 - [Fruits 360 Dataset](https://www.kaggle.com/moltean/fruits)
