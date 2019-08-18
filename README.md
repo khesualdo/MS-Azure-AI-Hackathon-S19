@@ -39,6 +39,8 @@ Go to [Custom Vision Portal](https://www.customvision.ai) and create a new proje
 - Set `COGNITIVE_URL` in `index.js` for image file (available after publishing the project)
 - Set `COGNITIVE_KEY` in `index.js` (available after publishing the project)
 
+![](https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/static/portal.png)
+
 > If you get the `We only support publishing to a prediction resource in the same region as the training resource the project resides in.` error, create a Custom Vision resource. Makes sure it is in the same region as all of your other resources.
 > [Tutorial](https://www.youtube.com/watch?v=Sw_Zkb7WFDA) on how to use the Custom Vision Portal.
 
