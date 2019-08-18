@@ -1,6 +1,6 @@
 # FRÜT :cherries: :lemon: :watermelon:
 
-![](https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/Logo.jpg)
+![](https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/static/banner.jpg)
 
 ## Inspiration
 
@@ -8,10 +8,10 @@ The inspiration comes from [this](https://www.youtube.com/watch?v=sAiTuitN5b8&t=
 
 While, it is easy to spot rotten fruits, if the fruits are in perfect condition, the agent may or may not know if the fruit is allowed into the country. Also, it is definitely easy to identify common fruits, such as bananas or oranges, however, it is more difficult to identify more exotic fruits, such as cherimoyas, sweetsops, etc... It gets worse when fruits look very similar, for example - strawberry guavas and cranberries, lima and (large) limes or even unripe oranges.
 
-<img src="https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/strawberry-guavas.jpg" height="250" width="220"> <img src="https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/cranberries.jpg" height="250" width="230">
+<img src="https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/static/strawberry-guavas.jpg" height="250" width="220"> <img src="https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/static/cranberries.jpg" height="250" width="230">
 > Strawberry guavas on the left / Cranberries on the right
 
-<img src="https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/limas.jpeg" height="250" width="250"> <img src="https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/limes.jpg" height="250" width="250">
+<img src="https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/static/limas.jpeg" height="250" width="250"> <img src="https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/static/limes.jpg" height="250" width="250">
 > Limas on the left / Limes on the right
 
 An agent may make a mistake by confiscating permitted items, in this case the people are negatively affected by having to pay a fine. On the other hand, an agent may make a mistake by not confiscating non-permitted items, in this case the entire country is negatively affected by having to pay an even bigger "fine" to treat unknown insects and plant diseases.
@@ -23,7 +23,7 @@ FRÜT could assist Border Service Officers in identifing different fruits, along
 FRÜT could also be used by regular citizens during their shopping trips.
 
 ## Implementation
-![](https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/Flow-Diagram.png)
+![](https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/static/diagram.png)
 
 ## Run
 
