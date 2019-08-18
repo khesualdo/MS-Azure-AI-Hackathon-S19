@@ -25,6 +25,10 @@ FRÜT could also be used by regular citizens during their shopping trips.
 ## Implementation
 ![](https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/static/diagram.png)
 
+![](https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/static/app1.png)
+![](https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/static/app2.png)
+> FRÜT screenshots
+
 ## Run
 
 Create a Function App resource on Azure portal
