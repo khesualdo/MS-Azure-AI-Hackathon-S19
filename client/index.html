@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<title>FRÜT</title>
+	</head>
+	<body>
+
+		<div style="margin: 2em 0em 0em 2em">
+			<video id="video" width="640" height="480" autoplay></video>
+			<canvas style="display: none" id="canvas" width="640" height="480" ></canvas>
+			<br>
+			<button type="button" class="btn btn-primary btn-lg" id="snap">Detect Fruit</button>
+			<h2 style="margin: 1em 0em 0em 0em" id="fruit-info"></h2>
+		</div>
+
+		<script>
+
+			var SERVER = 'http://localhost:8888'
+
+			// Grab elements, create settings, etc.
+			var video = document.getElementById('video');
+			var infoField = document.getElementById('fruit-info');
+			var canvas = document.getElementById('canvas');
+			var context = canvas.getContext('2d')
+
+			// Get access to the camera
+			if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+				navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+						video.srcObject = stream;
+						video.play();
+				});
+
+				document.getElementById("snap").addEventListener("click", function() {
+					context.drawImage(video, 0, 0, 640, 480);
+					var picture = canvas.toDataURL().replace('data:image/png;base64,','')
+					var fruit = ''
+
+					fetch(`${SERVER}/fruitPredictions`, {
+							method: 'post',
+							headers: {
+									'Content-Type': 'application/octet-stream'
+							},
+							body: JSON.stringify({data:picture})
+					})
+					.then(response => response.json())
+					.then(jsondata => {
+
+						fruit = jsondata.fruit.charAt(0).toUpperCase() + jsondata.fruit.slice(1)
+
+						fetch(`${SERVER}/fruitallowed?fruit=${jsondata.fruit}`, {
+							method: 'get'
+						})
+						.then(response => response.json())
+						.then(jsondata => {
+
+							infoField.textContent = fruit
+							infoField.textContent += ' | '
+							infoField.textContent += jsondata.info
+
+						})
+
+					})
+				});
+			}
+		</script>
+	</body>
+</html>
