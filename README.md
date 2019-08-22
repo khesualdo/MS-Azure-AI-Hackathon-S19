@@ -46,14 +46,14 @@ Go to [Custom Vision Portal](https://www.customvision.ai) and create a new proje
 
 #### Run Client
 ```
-> cd /client
+> cd client/
 > http-server -c-1
 ```
 > [http-server on npm](https://www.npmjs.com/package/http-server)
 
 #### Run Server
 ```
-> cd /server
+> cd server/
 > node index.js
 ```
 
