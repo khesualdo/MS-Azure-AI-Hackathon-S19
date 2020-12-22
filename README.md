@@ -1,5 +1,7 @@
 # FRÜT :cherries: :lemon: :watermelon:
 
+🍒 🍋 🍉 FRÜT utilizes Azure Cognitive Vision API to assist Border Service Officers in identifying different fruits as well as provides information associated with the identified fruit. 
+
 ![](https://github.com/00111000/MS-Azure-AI-Hackathon-S19/blob/master/static/banner.jpg)
 
 ## Inspiration
